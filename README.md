@@ -66,21 +66,25 @@ function 리듀서(previousState, action) {
 const store = createStore(리듀서);
 ```
 
-- createStore<S>(
+```js
+createStore<S>(
   reducer: Reducer<S>,
   preloadedState:S,
   enhancer?: StoreEnhancer<S>
   ): Store<S>;
+```
 
 ## store
 
-- store.getState();
+```js
+store.getState();
 
-- store.dispatch(액션);, store.dispatch(액션생성자());
+store.dispatch(액션);, store.dispatch(액션생성자());
 
-- const unsubscribe = store.subscribe(() => {});
+const unsubscribe = store.subscribe(() => {});
 
-  - 리턴이 unsubscribe 라는 점!
-  - unsubscribe(); 하면 제거
+  // 리턴이 unsubscribe 라는 점!
+  // unsubscribe(); 하면 제거
 
-- store.replaceReducer(다른리듀서);
+store.replaceReducer(다른리듀서);
+```
